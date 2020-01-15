@@ -5,7 +5,7 @@
   let { title, image, id } = product;
 </script>
 
-<div class="col-sm-6 col-md-4 col-lg-4">
+<div class="col-sm-6 col-md-3 col-lg-3">
 <div class="card">
   <img src="{image.url}" class="justify-content card-img-top" alt="...">
   <div class="card-body">
