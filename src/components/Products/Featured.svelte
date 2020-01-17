@@ -1,9 +1,10 @@
 <script>
-  import products from "../../stores/productStore";
+  import products, { featuredStore } from "../../stores/productStore";
   import Product from "./Product.svelte";
   import Loading from "../Loading.svelte";
 
-  $: featureProducts = $products.filter(product => product.featured === true);
+
+  // $: featureProducts = $products.filter(product => product.featured === true);
   
 
 </script>
@@ -13,7 +14,7 @@
   <h3 class="text-center">Featured Products</h3>
   <br>
   <div class="row">
-    {#each featureProducts as product}
+    {#each $featuredStore as product}
       <Product {product} />
     {:else}
       <Loading />
