@@ -3,7 +3,7 @@
 	import { Router, Route } from "svelte-routing";
 
 	// Components
-	import Navbar from "./components/Navbar.svelte";
+	import Navbar from "./components/Navbar/Navbar.svelte";
 	import Home from "./pages/Home.svelte";
 	import About from "./pages/About.svelte";
 	import Products from "./pages/Products.svelte";
