@@ -1,8 +1,9 @@
 <script>
   import { link } from "svelte-routing";
   import CartButton from "../Cart/CartButton.svelte";
+  import globalStore from "../../stores/globalStore";
+  let openSideBar = globalStore.toggleItem;
 </script>
-
 
 <div class="pos-f-t">
   <div class="collapse" id="navbarToggleExternalContent">
@@ -12,7 +13,7 @@
     </div>
   </div>
   <nav class="fixed-top navbar navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button on:click={() => openSideBar("sideBar", true)} class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/" use:link>Online Shop</a>
